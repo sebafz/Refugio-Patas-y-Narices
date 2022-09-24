@@ -12,8 +12,8 @@ header {
   background-color: #a8dadc;
   padding: 5% 4%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 @media (min-width: 800px) {
   header {
@@ -23,12 +23,17 @@ header {
   }
 }
 
-.ancho {
-  width: 162%;
-}
-
 main {
   padding: 5% 8%;
+}
+
+.ancho {
+  width: 120%;
+}
+@media (min-width: 500px) {
+  .ancho {
+    width: 160%;
+  }
 }
 
 footer {
@@ -88,11 +93,6 @@ textarea {
   margin: 5px 0;
 }
 
-textarea {
-  width: 160px;
-  height: 100px;
-}
-
 li {
   display: inline-block;
   padding: 15px;
@@ -149,6 +149,7 @@ iframe {
   font-size: 120%;
 }
 .redes__link:hover {
+  transform: scale(1.4) rotate(5deg);
   color: #a8dadc;
 }
 .redes__icono {
@@ -158,8 +159,8 @@ iframe {
 
 .paginas {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 @media (min-width: 518px) {
   .paginas {
@@ -186,7 +187,7 @@ iframe {
 
 .inicio {
   background-color: #f1faee;
-  padding: 3%;
+  padding: 0 3% 3% 3%;
   display: grid;
   grid-template-areas: "inicio_img inicio_img" "inicio_art  inicio_art";
   grid-template-columns: 1fr 1fr;
@@ -355,6 +356,11 @@ iframe {
 .donaciones__icono {
   width: 20px;
 }
+.donaciones--centrar {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
 
 .adopta__p {
   overflow: overlay;
@@ -396,12 +402,20 @@ iframe {
   border-color: #1d3557;
   color: #1d3557;
 }
+.formulario__donar {
+  border-color: #1d3557;
+  color: #1d3557;
+}
 .formulario__seccion--2 {
   grid-area: seccion2;
 }
 .formulario__seccion--3 {
   grid-area: seccion3;
   text-align: center;
+}
+
+.formulario__enviar {
+  margin: 10px 0 8px;
 }
 
 .logo, .inicio__carusel__img {

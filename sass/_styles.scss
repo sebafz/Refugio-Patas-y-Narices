@@ -24,7 +24,11 @@ main {
 }
 
 .ancho {
-  width: 162%;
+  width: 120%;
+
+  @media (min-width: 500px) {
+    width: 160%;
+  }
 }
 
 footer {
@@ -83,11 +87,6 @@ select,
 textarea {
   margin: 5px 0;
 }
-
-textarea {
-  width: 160px;
-  height: 100px;
-}
 li {
   display: inline-block;
   padding: 15px;
@@ -144,6 +143,7 @@ iframe {
     font-size: 120%;
 
     &:hover {
+      transform: scale(1.4) rotate(5deg);
       color: $celeste;
     }
   }
@@ -181,7 +181,7 @@ iframe {
 
 .inicio {
   background-color: $crema;
-  padding: 3%;
+  padding: 0 3% 3% 3%;
   display: grid;
   grid-template-areas:
     "inicio_img inicio_img"
@@ -364,6 +364,12 @@ iframe {
   &__icono {
     width: 20px;
   }
+
+  &--centrar {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
 }
 
 .adopta__p {
@@ -414,6 +420,11 @@ iframe {
     color: $azul;
   }
 
+  &__donar {
+    border-color: $azul;
+    color: $azul;
+  }
+
   &__seccion--2 {
     grid-area: seccion2;
   }
@@ -422,6 +433,10 @@ iframe {
     grid-area: seccion3;
     text-align: center;
   }
+}
+
+.formulario__enviar {
+  margin: 10px 0 8px;
 }
 
 .logo {
@@ -448,5 +463,10 @@ iframe {
     &:hover {
       color: grey;
     }
+  }
+}
+
+.btn {
+  &__donar {
   }
 }
